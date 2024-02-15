@@ -16,6 +16,11 @@ class ColorResource {
   static const Color selectLanguageButton = Color(0xff1B3FF9);
   static const Color darkgreenprofessional = Color(0xff276F37);
   static const Color darkrupeeblue = Color(0xff8B2CF5);
+  static const Color accoutdetailsappbar = Color(0xffF4E7E7);
+  static const Color snackbargreen = Color(0xff2FA986);
+  static const Color exclusivetext = Color(0xff26585B);
+  static const Color mgpaymentrisk = Color(0xffBC2B3C);
+  static const Color startext = Color(0xffE7820C);
 
   static const Color textButtonColor = Color(0xffEE682A);
   static const Color mainColor = Color(0xff882B97);

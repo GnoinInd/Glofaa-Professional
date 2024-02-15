@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 import 'package:intl/intl.dart';
 
 class DailyWorkingDetailsScreen extends StatefulWidget {
@@ -37,6 +38,104 @@ class _DailyWorkingDetailsScreenState extends State<DailyWorkingDetailsScreen> {
       body: SingleChildScrollView(
         child: Column(
           children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 15,right: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 73,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: ColorResource.accoutdetailsappbar,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10),bottomRight: Radius.circular(5),bottomLeft: Radius.circular(5)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("TUE"),
+                        Text("22"),
+                        Image.asset("assets/images/calendercheck.png")
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 73,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      //color: ColorResource.accoutdetailsappbar,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10),bottomRight: Radius.circular(5),bottomLeft: Radius.circular(5)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("TUE"),
+                        Text("22"),
+                        Image.asset("assets/images/calendercheck.png")
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 73,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: ColorResource.accoutdetailsappbar,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10),bottomRight: Radius.circular(5),bottomLeft: Radius.circular(5)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("TUE"),
+                        Text("22"),
+                        Image.asset("assets/images/calendercheck.png")
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 73,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: ColorResource.accoutdetailsappbar,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10),bottomRight: Radius.circular(5),bottomLeft: Radius.circular(5)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("TUE"),
+                        Text("22"),
+                        Image.asset("assets/images/calendercheck.png")
+
+                      ],
+                    ),
+                  ),
+                  Container(
+                    height: 73,
+                    width: 60,
+                    decoration: BoxDecoration(
+                      color: ColorResource.accoutdetailsappbar,
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(10),topRight:Radius.circular(10),bottomRight: Radius.circular(5),bottomLeft: Radius.circular(5)),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text("TUE"),
+                        Text("22"),
+                        Image.asset("assets/images/calendercheck.png")
+
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
             Text(
               formattedDate,
               style: const TextStyle(
@@ -485,6 +584,7 @@ class _DailyWorkingDetailsScreenState extends State<DailyWorkingDetailsScreen> {
             ElevatedButton(
               onPressed: () {
                 ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  backgroundColor: ColorResource.snackbargreen,
                     content: Text(
                   "Calendar marked for $formattedDate",
                   style: const TextStyle(
@@ -546,8 +646,8 @@ class _DailyWorkingDetailsScreenState extends State<DailyWorkingDetailsScreen> {
                 )),
         icon: Icon(
           (index == 1)
-              ? Icons.check_circle_outline_outlined
-              : Icons.stop_circle_outlined,
+              ? Icons.check
+              : Icons.stop_outlined,
           color: (selected1 == index) ? Colors.white : color,
         ),
         label: Text(name,
@@ -575,8 +675,8 @@ class _DailyWorkingDetailsScreenState extends State<DailyWorkingDetailsScreen> {
             ? ElevatedButton.styleFrom(
                 elevation: 5,
                 padding: EdgeInsets.zero,
-                backgroundColor: color,
-                side: BorderSide(color: color),
+                backgroundColor:  color,
+                side: BorderSide(color: ColorResource.grey_3),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
@@ -584,14 +684,15 @@ class _DailyWorkingDetailsScreenState extends State<DailyWorkingDetailsScreen> {
             : OutlinedButton.styleFrom(
                 elevation: 5,
                 padding: EdgeInsets.zero,
-                foregroundColor: color,
-                side: BorderSide(color: color),
+                backgroundColor: ColorResource.white,
+                foregroundColor: ColorResource.white,
+                side: BorderSide(color: ColorResource.grey_3),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8),
                 )),
         child: Text(name,
             style: TextStyle(
-                color: (selected2 == index) ? Colors.white : color,
+                color: (selected2 == index) ? Colors.white : ColorResource.black,
                 fontWeight: FontWeight.w600,
                 fontFamily: 'Poppins',
                 fontSize: 14)),

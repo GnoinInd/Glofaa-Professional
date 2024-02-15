@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glofaa/booking_calender_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
@@ -14,18 +15,31 @@ class _MenuScreenState extends State<MenuScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorResource.accoutdetailsappbar,
         title: const Text(
           "Menu",
           style: TextStyle(
               fontWeight: FontWeight.w600, fontFamily: 'Poppins', fontSize: 18),
         ),
         actions: [
-          IconButton(
-            icon: const Icon(Icons.notifications_none_outlined),
-            onPressed: () {
+          InkWell(
+            onTap: (){
               /* Navigator.push(context, MaterialPageRoute(builder: (context) => LiveTrainingScreen()));*/
+
             },
-          ),
+            child: Padding(
+              padding: const EdgeInsets.only(right: 16),
+              child: Stack(
+                children: [
+                  Image.asset("assets/images/notificationcount1.png",height: 24,width: 24,color: ColorResource.selectLanguageButton,),
+                  // Positioned(
+                  //   left:5,
+                  //     bottom:5,
+                  //     child: Image.asset("assets/images/notificationcount.png")),
+                ],
+              ),
+            ),
+          )
         ],
       ),
       body: SingleChildScrollView(
@@ -65,11 +79,12 @@ class _MenuScreenState extends State<MenuScreen> {
                   ),
                 ),
                 trailing: Container(
-                  width: 25,
-                  height: 25,
-                  decoration: const BoxDecoration(
+                  width: 24,
+                  height: 24,
+                  decoration:  BoxDecoration(
+                    border: Border.all(color: ColorResource.selectLanguageButton),
+                    borderRadius: BorderRadius.circular(2),
                       color: Colors.white,
-                      shape: BoxShape.circle,
                       boxShadow: [
                         BoxShadow(
                           color: Color(0x3F000000),
@@ -79,7 +94,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   child: const Icon(
                     Icons.keyboard_arrow_right,
                     size: 20,
-                    color: Colors.black54,
+                    color: ColorResource.selectLanguageButton,
                   ),
                 ),
               ),
@@ -234,11 +249,7 @@ class _MenuScreenState extends State<MenuScreen> {
                     },
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: const Icon(
-                      Icons.calendar_month_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/calendarpic1.png"),
                     title: const Text(
                       'Your Calendar',
                       style: TextStyle(
@@ -248,14 +259,10 @@ class _MenuScreenState extends State<MenuScreen> {
                           fontSize: 14),
                     ),
                   ),
-                  const ListTile(
+                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.work_history,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/newjobpic1.png"),
                     title: Text(
                       'Job History',
                       style: TextStyle(
@@ -268,11 +275,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: const Icon(
-                      Icons.credit_card,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/getcashpic.png"),
                     title: const Text(
                       'Credit Balance',
                       style: TextStyle(
@@ -300,11 +303,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: const Icon(
-                      Icons.model_training,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/trainingpic.png"),
                     title: const Text(
                       'Training Center',
                       style: TextStyle(
@@ -329,14 +328,10 @@ class _MenuScreenState extends State<MenuScreen> {
                       ),
                     ),
                   ),
-                  const ListTile(
+                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.safety_check,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/protectpic.png"),
                     title: Text(
                       'Insurance',
                       style: TextStyle(
@@ -346,14 +341,10 @@ class _MenuScreenState extends State<MenuScreen> {
                           fontSize: 14),
                     ),
                   ),
-                  const ListTile(
+                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.group_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/grouppic.png"),
                     title: Text(
                       'Your helpers',
                       style: TextStyle(
@@ -390,16 +381,12 @@ class _MenuScreenState extends State<MenuScreen> {
                       blurRadius: 1,
                     ),
                   ]),
-              child: const Column(
+              child:  Column(
                 children: [
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.shopping_bag_sharp,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/shoppingbagpic.png"),
                     title: Text(
                       'Glofaa shop',
                       style: TextStyle(
@@ -436,16 +423,12 @@ class _MenuScreenState extends State<MenuScreen> {
                       blurRadius: 1,
                     ),
                   ]),
-              child: const Column(
+              child:  Column(
                 children: [
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.account_circle,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/user1.png"),
                     title: Text(
                       'Profile',
                       style: TextStyle(
@@ -458,11 +441,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.translate,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/translation1.png"),
                     title: Text(
                       'Select Language',
                       style: TextStyle(
@@ -475,11 +454,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.account_balance_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/bankbuildingpic.png"),
                     title: Text(
                       'GST, PAN and Bank Details',
                       style: TextStyle(
@@ -492,11 +467,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.settings,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/setting1.png"),
                     title: Text(
                       'Account Settings',
                       style: TextStyle(
@@ -538,11 +509,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: const Icon(
-                      Icons.person_add_alt_1_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/adduser1.png"),
                     title: const Text(
                       'Invite your friends (Refer)',
                       style: TextStyle(
@@ -567,14 +534,10 @@ class _MenuScreenState extends State<MenuScreen> {
                       ),
                     ),
                   ),
-                  const ListTile(
+                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.person_search_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/finduser1.png"),
                     title: Text(
                       'Find friends on Glofaa Technology',
                       style: TextStyle(
@@ -611,16 +574,12 @@ class _MenuScreenState extends State<MenuScreen> {
                       blurRadius: 1,
                     ),
                   ]),
-              child: const Column(
+              child:  Column(
                 children: [
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.perm_phone_msg_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading:Image.asset("assets/images/useronphone.png") ,
                     title: Text(
                       'Contact Us',
                       style: TextStyle(
@@ -658,16 +617,12 @@ class _MenuScreenState extends State<MenuScreen> {
                       blurRadius: 1,
                     ),
                   ]),
-              child: const Column(
+              child:  Column(
                 children: [
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.description_outlined,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/analyze.png"),
                     title: Text(
                       'Terms of Use',
                       style: TextStyle(
@@ -680,11 +635,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.policy_rounded,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/shield1.png"),
                     title: Text(
                       'Privacy policy',
                       style: TextStyle(
@@ -697,11 +648,7 @@ class _MenuScreenState extends State<MenuScreen> {
                   ListTile(
                     dense: true,
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(
-                      Icons.download_for_offline,
-                      color: Colors.blue,
-                      size: 25,
-                    ),
+                    leading: Image.asset("assets/images/download1.png"),
                     title: Text(
                       'Download Glofaa Technology Customer App',
                       style: TextStyle(

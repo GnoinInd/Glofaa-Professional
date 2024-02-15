@@ -1097,15 +1097,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1115,7 +1114,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1142,7 +1141,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1174,15 +1173,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1192,7 +1190,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1219,7 +1217,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1251,15 +1249,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1269,7 +1266,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1296,7 +1293,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1328,15 +1325,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1346,7 +1342,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1373,7 +1369,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1405,15 +1401,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1423,7 +1418,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1450,7 +1445,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1482,15 +1477,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1500,7 +1494,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1527,7 +1521,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
@@ -1559,15 +1553,14 @@ class _BottomOngoingServiceScreenState
                                   blurRadius: 4,
                                 ),
                               ]),
-                          child: const Column(
+                          child:  Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Row(
                                 children: [
-                                  SizedBox(
-                                      width: 30,
-                                      child: Icon(Icons.looks_one_outlined)),
-                                  Text(
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
                                     'Tomorrow',
                                     style: TextStyle(
                                         color: Colors.black54,
@@ -1577,7 +1570,7 @@ class _BottomOngoingServiceScreenState
                                   ),
                                 ],
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Row(
                                   mainAxisAlignment:
@@ -1604,7 +1597,7 @@ class _BottomOngoingServiceScreenState
                                   ],
                                 ),
                               ),
-                              Padding(
+                              const Padding(
                                 padding: EdgeInsets.only(left: 30.0, top: 5),
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',

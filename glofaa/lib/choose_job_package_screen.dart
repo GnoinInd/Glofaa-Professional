@@ -13,16 +13,19 @@ class _ChooseJobPackageScreenState extends State<ChooseJobPackageScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Choose Your Job Package',
-          style: TextStyle(
-              fontWeight: FontWeight.w600, fontFamily: 'Poppins', fontSize: 20),
-        ),
-      ),
+      appBar: AppBar(),
       body: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+             Padding(
+               padding: const EdgeInsets.only(left: 16),
+               child: Text(
+                'Choose Your Job Package',
+                style: TextStyle(
+                    fontWeight: FontWeight.w600, fontFamily: 'Poppins', fontSize: 20),
+                           ),
+             ),
             Container(
               margin: const EdgeInsets.only(left: 15, right: 15, top: 15),
               decoration: BoxDecoration(

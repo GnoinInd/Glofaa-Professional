@@ -71,7 +71,7 @@ class _TrainingCenterScreenState extends State<TrainingCenterScreen> {
               const SizedBox(width: 20),
               customRadioButton("All Trainings", 0),
               const SizedBox(width: 20),
-              customRadioButton("Pending(8)", 1),
+              customRadioButton("Pending(7)", 1),
             ],
           ),
           const SizedBox(

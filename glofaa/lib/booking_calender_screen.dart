@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa/daily_working_details_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class BookingCalenderScreen extends StatefulWidget {
@@ -17,6 +18,7 @@ class _BookingCalenderScreenState extends State<BookingCalenderScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorResource.accoutdetailsappbar,
         title: const Text(
           "Your Booking Calender",
           style: TextStyle(
@@ -43,24 +45,16 @@ class _BookingCalenderScreenState extends State<BookingCalenderScreen> {
                   boxShadow: const [
                     BoxShadow(
                       color: Color(0x3F000000),
-                      blurRadius: 1,
+                      blurRadius: 2,
                     ),
                   ]),
               child: TableCalendar(
                 availableGestures: AvailableGestures.all,
-                headerStyle: const HeaderStyle(
+                headerStyle:  HeaderStyle(
                   headerPadding: EdgeInsets.symmetric(vertical: 15),
-                  leftChevronIcon: Icon(
-                    Icons.chevron_left,
-                    size: 30,
-                    color: Colors.black54,
-                  ),
+                  leftChevronIcon: Image.asset("assets/images/leftcalender.png",height: 24,width: 33,),
                   leftChevronPadding: EdgeInsets.zero,
-                  rightChevronIcon: Icon(
-                    Icons.chevron_right,
-                    size: 30,
-                    color: Colors.black54,
-                  ),
+                  rightChevronIcon: Image.asset("assets/images/rightcalender.png",height: 24,width: 33,),
                   rightChevronPadding: EdgeInsets.zero,
                   titleCentered: true,
                   formatButtonVisible: false,

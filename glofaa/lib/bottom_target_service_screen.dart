@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa/choose_job_package_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
+import 'package:glofaa/utils/resource/dimensions_resource.dart';
+import 'package:glofaa/utils/resource/style_resource.dart';
 
 class BottomTargetServiceScreen extends StatefulWidget {
   const BottomTargetServiceScreen({super.key});
@@ -33,17 +36,17 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                         'GLOFAA',
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Poppins',
-                            fontSize: 15),
+                            fontSize: 16),
                       ),
                       Text(
                         'PARTNER',
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Poppins',
-                            fontSize: 18),
+                            fontSize:20),
                       ),
                     ],
                   ),
@@ -69,10 +72,10 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                   Text(
                     'Your MG payment is at risk!',
                     style: TextStyle(
-                        color: Colors.redAccent.shade200,
-                        fontWeight: FontWeight.w600,
+                        color: ColorResource.mgpaymentrisk,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        fontSize: 15),
+                        fontSize:20),
                   ),
                   const SizedBox(
                     height: 10,
@@ -81,9 +84,9 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                     '1 jobs sent',
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize:16),
                   ),
                   const SizedBox(
                     height: 10,
@@ -91,10 +94,10 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                   const Text(
                     '50 day’s left in this job Pack',
                     style: TextStyle(
-                        color: Colors.black54,
-                        fontWeight: FontWeight.w600,
+                        color: Colors.black,
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize: 14),
                   ),
                   Container(
                     alignment: Alignment.center,
@@ -110,7 +113,7 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                       },
                       style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              const Color.fromRGBO(147, 76, 234, 1),
+                               ColorResource.selectLanguageButton,
                           padding: const EdgeInsets.symmetric(horizontal: 10)),
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
@@ -167,26 +170,31 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                 children: [
                   ListTile(
                     contentPadding: EdgeInsets.zero,
-                    leading: const Icon(
-                      Icons.stars,
-                      color: Colors.orange,
-                      size: 40,
-                    ),
-                    title: const Text(
+                    leading: Stack(
+                      children: [
+                        Image.asset("assets/images/fivestar.png"),
+                        Positioned(
+                          left:20,
+                            top: 5,
+                            bottom:10,
+                            child: Image.asset("assets/images/starfield.png")),
+
+                      ],),
+                    title:  Text(
                       '4.6',
                       style: TextStyle(
-                          color: Colors.orange,
-                          fontWeight: FontWeight.w600,
+                          color: ColorResource.startext,
+                          fontWeight: FontWeight.w700,
                           fontFamily: 'Poppins',
-                          fontSize: 20),
+                          fontSize:24),
                     ),
                     subtitle: const Text(
                       'Rating in last 100 jobs',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w500,
                           fontFamily: 'Poppins',
-                          fontSize: 13),
+                          fontSize:14),
                     ),
                     trailing: Container(
                       width: 25,
@@ -210,10 +218,10 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                   const Text(
                     'Minimum Rating required is 4.8',
                     style: TextStyle(
-                        color: Colors.orange,
-                        fontWeight: FontWeight.w600,
+                        color: ColorResource.startext,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize:14),
                   ),
                   SliderTheme(
                     data: const SliderThemeData(
@@ -239,6 +247,26 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                       label: sliderValue.toStringAsFixed(1).toString(),
                     ),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(left:28,right:28),
+                    child: Row(
+                      children: [
+                        Text("3.5",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("4.3",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("4.5",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("4.6",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("4.7",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("4.8",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.startext),),
+                        Spacer(),
+                        Text("5",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeLarge, ColorResource.greenColor),),
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
@@ -258,27 +286,23 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
               child: Column(children: [
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: const Icon(
-                    Icons.fact_check,
-                    color: Colors.green,
-                    size: 30,
-                  ),
+                  leading: Image.asset("assets/images/passbook.png"),
                   title: const Text(
                     '75%',
                     style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 15,
+                      fontSize:20,
                     ),
                   ),
                   subtitle: const Text(
                     'Response Rate in last 20 jobs',
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize:12),
                   ),
                   trailing: Container(
                     width: 25,
@@ -302,27 +326,23 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                 const Divider(),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: const Icon(
-                    Icons.fact_check,
-                    color: Colors.green,
-                    size: 30,
-                  ),
+                  leading: Image.asset("assets/images/passbook.png"),
                   title: const Text(
                     '85%',
                     style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 15,
+                      fontSize:20,
                     ),
                   ),
                   subtitle: const Text(
                     'Service Delivery Rate in last 20 jobs',
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize:12),
                   ),
                   trailing: Container(
                     width: 25,
@@ -346,27 +366,23 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                 const Divider(),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: const Icon(
-                    Icons.fact_check,
-                    color: Colors.green,
-                    size: 30,
-                  ),
+                  leading: Image.asset("assets/images/passbook.png"),
                   title: const Text(
                     '100%',
                     style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 15,
+                      fontSize:20,
                     ),
                   ),
                   subtitle: const Text(
                     'First Time Right in last 20 jobs',
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
-                        fontSize: 13),
+                        fontSize:12),
                   ),
                   trailing: Container(
                     width: 25,
@@ -390,11 +406,14 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                 const Divider(),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: const Icon(
-                    Icons.stars,
-                    color: Colors.orange,
-                    size: 30,
-                  ),
+                  leading: Stack(
+                    children: [
+                      Image.asset("assets/images/fivestar.png",height: 31.73,width: 25.67,),
+                      Positioned(
+                         left:8,
+                          child: Image.asset("assets/images/starfield.png",height: 29.19,width: 24.44,)),
+
+                    ],),
                   title: const Text(
                     '47.06%',
                     style: TextStyle(
@@ -433,11 +452,7 @@ class _BottomTargetServiceScreenState extends State<BottomTargetServiceScreen> {
                 const Divider(),
                 ListTile(
                   contentPadding: EdgeInsets.zero,
-                  leading: const Icon(
-                    Icons.fact_check,
-                    color: Colors.green,
-                    size: 30,
-                  ),
+                  leading: Image.asset("assets/images/passbook.png"),
                   title: const Text(
                     '0',
                     style: TextStyle(

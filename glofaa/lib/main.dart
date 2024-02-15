@@ -42,25 +42,21 @@ class _SelectLanguagePageState extends State<SelectLanguagePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: ListView(
-        children: [ Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical:48),
-            child: Column(
-              children: [
-                Image.asset("assets/images/welcome_man.png",height: 206,width: 230,),
-                SizedBox(height: MediaQuery.of(context).size.height *0.05,),
-                Image.asset("assets/images/welcom_professional.png",height: 102,width: 290,),
-               const Text("to",style: TextStyle(fontFamily: 'InknutAntiqua',fontSize:30,),),
-                SizedBox(height: MediaQuery.of(context).size.height *0.01,),
-               const  Text("Glofaa Technology",style: TextStyle(fontFamily: 'InknutAntiqua',fontSize:28,),textAlign: TextAlign.center,),
-                SizedBox(height: MediaQuery.of(context).size.height * 0.2,),
-                InkWell(onTap: (){Navigator.push(context,MaterialPageRoute(builder: (context)=> LanguageScreen()));}, child: _selectButton()),
-              ],
-            ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical:48),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+             const Text(" welcome to",style: TextStyle(fontFamily: 'InknutAntiqua',fontSize:30,),),
+              SizedBox(height: MediaQuery.of(context).size.height *0.01,),
+             const  Text("Glofaa Technology",style: TextStyle(fontFamily: 'InknutAntiqua',fontSize:28,),textAlign: TextAlign.center,),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.04,),
+              InkWell(onTap: (){Navigator.push(context,MaterialPageRoute(builder: (context)=> LanguageScreen()));}, child: _selectButton()),
+            ],
           ),
         ),
-    ],
       ),
     );
   }
@@ -72,10 +68,17 @@ Widget _selectButton(){
     width: 259,
     decoration: BoxDecoration(
       color: ColorResource.selectLanguageButton,
-      borderRadius: BorderRadius.circular(5),
+      borderRadius: BorderRadius.circular(37),
     ),
-    child: Center(
-      child: Text("Select Language",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeOverLarge, ColorResource.white),),
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        children: [
+          Image.asset("assets/images/languageiconpic.png",height: 15,width:15,color: ColorResource.white,),
+          SizedBox(width:5,),
+          Text("Select Language",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeOverLarge, ColorResource.white),),
+        ],
+      ),
     ),
   );
 }
@@ -103,7 +106,7 @@ class _LanguageScreenState extends State<LanguageScreen> {
             child: InkWell(
               onTap:() {
                 Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => SignUpPage()));},
+                    MaterialPageRoute(builder: (context) => MyStartPage()));},
               child: Center(
                 child: Container(
                   height: 58,

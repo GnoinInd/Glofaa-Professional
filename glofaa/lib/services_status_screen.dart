@@ -4,6 +4,9 @@ import 'package:glofaa/bottom_money_service_screen.dart';
 import 'package:glofaa/bottom_new_service_screen.dart';
 import 'package:glofaa/bottom_ongoing_service_screen.dart';
 import 'package:glofaa/bottom_target_service_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
+import 'package:glofaa/utils/resource/dimensions_resource.dart';
+import 'package:glofaa/utils/resource/style_resource.dart';
 
 import 'menu_screen.dart';
 
@@ -30,26 +33,47 @@ class _ServicesStatusScreenState extends State<ServicesStatusScreen> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          IconButton(
-            icon: const Icon(Icons.sms_outlined),
-            onPressed: () {},
+          Container(
+            height: 20,
+            width: 40,
+            decoration: BoxDecoration(
+              color: ColorResource.white,
+              borderRadius: BorderRadius.circular(5),
+              boxShadow: const [
+                BoxShadow(
+                  color: Colors.grey,
+                  blurRadius: 1.0, // soften the shadow
+                  spreadRadius: 1.0, //extend the shadow
+                  offset: Offset(
+                    1.0, // Move to right 5  horizontally
+                    2.0, // Move to bottom 5 Vertically
+                  ),
+                )
+              ],
+            ),
+            child:  Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                 Text("50",style: StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.black),),
+               Image.asset("assets/images/navigationicon.png",height: 13.85,width: 21,)
+              ],
+            ),
           ),
           IconButton(
-            icon: const Icon(Icons.person_outlined),
+            icon: Image.asset("assets/images/customericon.png"),
             onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const MenuScreen()));
             },
           ),
           IconButton(
-            icon: const Icon(Icons.notifications_none_outlined),
+            icon: Image.asset("assets/images/notificationpic.png"),
             onPressed: () {},
           ),
+
         ],
-        leading: IconButton(
-          icon: const Icon(Icons.pending_outlined),
-          onPressed: () {},
-        ),
+        leading: Image.asset("assets/images/menupic.png")
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -61,16 +85,16 @@ class _ServicesStatusScreenState extends State<ServicesStatusScreen> {
             const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
         unselectedLabelStyle:
             const TextStyle(fontWeight: FontWeight.w500, fontFamily: 'Poppins'),
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        items:  [
+          BottomNavigationBarItem(icon: Image.asset("assets/images/bottomhome.png"), label: "Home",),
           BottomNavigationBarItem(
-              icon: Icon(Icons.add_card_outlined), label: "New"),
+              icon: Image.asset("assets/images/bottomnew.png"), label: "New"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.auto_mode), label: "Ongoing"),
+              icon:Image.asset("assets/images/bottomongoing.png"), label: "Ongoing"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.flag_circle), label: "Target"),
+              icon: Image.asset("assets/images/bottomtarget.png"), label: "Target"),
           BottomNavigationBarItem(
-              icon: Icon(Icons.currency_rupee_rounded), label: "Money"),
+              icon: Image.asset("assets/images/bottommoney.png"), label: "Money"),
         ],
         onTap: (selectedIndex) {
           setState(() {

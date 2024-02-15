@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 
 class BottomHomeServiceScreen extends StatefulWidget {
   const BottomHomeServiceScreen({super.key});
@@ -17,8 +18,8 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
         child: Column(
           children: [
             Container(
-              padding: const EdgeInsets.all(10),
-              margin: const EdgeInsets.all(15),
+              padding: EdgeInsets.symmetric(horizontal: 12,vertical: 5),
+              margin: EdgeInsets.symmetric(horizontal: 18,vertical:18),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.grey.shade200,
@@ -28,7 +29,8 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                       blurRadius: 4,
                     ),
                   ]),
-              child: const Column(
+              child:  Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
                     'New jobs are stopped',
@@ -40,7 +42,7 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                   ),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(Icons.shopping_bag_rounded),
+                    leading: Image.asset("assets/images/newjobpic.png"),
                     title: Text(
                       'Jobs are paused for today.Tap to start receiving jobs again. ',
                       style: TextStyle(
@@ -49,11 +51,21 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                           fontFamily: 'Poppins',
                           fontSize: 13),
                     ),
-                    trailing: Icon(Icons.keyboard_arrow_right),
+                    trailing: Container(
+                        height: 21,
+                        width: 21,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(55),
+                            border: Border.all(color: ColorResource.grey_3)
+                        ),
+                        child: Center(
+                          child: Image.asset("assets/images/righticon.png"),
+                        )
+                    )
                   ),
                   ListTile(
                     contentPadding: EdgeInsets.zero,
-                    leading: Icon(Icons.calendar_month_outlined),
+                    leading:Image.asset("assets/images/calendarpic.png"),
                     title: Text(
                       'You have achieved your target jobs for the day. Click on below button to start receiving jobs.',
                       style: TextStyle(
@@ -62,94 +74,99 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                           fontFamily: 'Poppins',
                           fontSize: 13),
                     ),
-                    trailing: Icon(Icons.keyboard_arrow_right),
+                    trailing: Container(
+                        height: 21,
+                        width: 21,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(55),
+                            border: Border.all(color: ColorResource.grey_3)
+                        ),
+                        child: Center(
+                          child: Image.asset("assets/images/righticon.png"),
+                        )
+                    )
                   )
                 ],
               ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  margin: const EdgeInsets.symmetric(horizontal: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x3F000000),
-                          blurRadius: 4,
+            Padding(
+              padding: const EdgeInsets.only(left: 18,right:18),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Container(
+                    height: 57,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                          ),
+                        ]),
+                    child: const Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Thu, Jul 21',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 13),
                         ),
-                      ]),
-                  child: const Column(
-                    children: [
-                      Text(
-                        'Thu, Jul 21',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            fontSize: 13),
-                      ),
-                      Text(
-                        'JOBS STOPPED',
-                        style: TextStyle(
-                            color: Colors.redAccent,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            fontSize: 13),
-                      ),
-                    ],
+                        Text(
+                          'JOBS STOPPED',
+                          style: TextStyle(
+                              color: Colors.redAccent,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 13),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x3F000000),
-                          blurRadius: 4,
+                  Container(
+                    height: 57,
+                    width: 120,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        color: Colors.white,
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                          ),
+                        ]),
+                    child: const Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          'Fri, Jul 22',
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 13),
                         ),
-                      ]),
-                  child: const Column(
-                    children: [
-                      Text(
-                        'Fri, Jul 22',
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            fontSize: 13),
-                      ),
-                      Text(
-                        'WORKING',
-                        style: TextStyle(
-                            color: Colors.green,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: 'Poppins',
-                            fontSize: 13),
-                      ),
-                    ],
+                        Text(
+                          'WORKING',
+                          style: TextStyle(
+                              color: Colors.green,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: 'Poppins',
+                              fontSize: 13),
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(17),
-                  margin: const EdgeInsets.only(right: 15, left: 15),
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: Colors.white,
-                      boxShadow: const [
-                        BoxShadow(
-                          color: Color(0x3F000000),
-                          blurRadius: 4,
-                        ),
-                      ]),
-                  child: const Icon(Icons.calendar_month_outlined),
-                ),
-              ],
+                  Image.asset("assets/images/calendarpic.png"),
+                ],
+              ),
             ),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 10),
@@ -163,7 +180,7 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                       blurRadius: 4,
                     ),
                   ]),
-              child: const ListTile(
+              child:  ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'No new jobs',
@@ -181,7 +198,24 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                       fontFamily: 'Poppins',
                       fontSize: 13),
                 ),
-                trailing: Icon(Icons.keyboard_arrow_right),
+                trailing: Container(
+                    height: 21,
+                    width: 21,
+                    decoration: BoxDecoration(
+                      color: ColorResource.white,
+                        borderRadius: BorderRadius.circular(55),
+                        border: Border.all(color: ColorResource.grey_3),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                          ),
+                        ]
+                    ),
+                    child: Center(
+                      child: Image.asset("assets/images/righticon.png"),
+                    )
+                ),
               ),
             ),
             Container(
@@ -196,7 +230,7 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                       blurRadius: 4,
                     ),
                   ]),
-              child: const ListTile(
+              child:  ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'No more jobs today',
@@ -206,7 +240,24 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                       fontFamily: 'Poppins',
                       fontSize: 13),
                 ),
-                trailing: Icon(Icons.keyboard_arrow_right),
+                trailing: Container(
+                    height: 21,
+                    width: 21,
+                    decoration: BoxDecoration(
+                        color: ColorResource.white,
+                        borderRadius: BorderRadius.circular(55),
+                        border: Border.all(color: ColorResource.grey_3),
+                        boxShadow: const [
+                          BoxShadow(
+                            color: Color(0x3F000000),
+                            blurRadius: 4,
+                          ),
+                        ]
+                    ),
+                    child: Center(
+                      child: Image.asset("assets/images/righticon.png"),
+                    )
+                ),
               ),
             ),
             Container(
@@ -223,7 +274,7 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                   ]),
               child: Column(
                 children: [
-                  const ListTile(
+                   ListTile(
                     contentPadding: EdgeInsets.zero,
                     title: Text(
                       'Cult',
@@ -233,7 +284,24 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                           fontFamily: 'Poppins',
                           fontSize: 13),
                     ),
-                    trailing: Icon(Icons.keyboard_arrow_right),
+                    trailing: Container(
+                        height: 21,
+                        width: 21,
+                        decoration: BoxDecoration(
+                            color: ColorResource.white,
+                            borderRadius: BorderRadius.circular(55),
+                            border: Border.all(color: ColorResource.grey_3),
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Color(0x3F000000),
+                                blurRadius: 4,
+                              ),
+                            ]
+                        ),
+                        child: Center(
+                          child: Image.asset("assets/images/righticon.png"),
+                        )
+                    ),
                   ),
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
@@ -495,14 +563,14 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
               margin: const EdgeInsets.only(left: 15, right: 15, top: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
+                  color: ColorResource.accoutdetailsappbar,
                   boxShadow: const [
                     BoxShadow(
                       color: Color(0x3F000000),
                       blurRadius: 4,
                     ),
                   ]),
-              child: const ListTile(
+              child:  ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'Earn upto 1000 for every friend of yours that join Glofaa',
@@ -522,17 +590,10 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
-                    Icon(
-                      Icons.keyboard_double_arrow_right,
-                      color: Colors.blue,
-                    ),
+                    Image.asset("assets/images/doublerighticon.png")
                   ],
                 ),
-                trailing: Icon(
-                  Icons.card_giftcard,
-                  size: 40,
-                  color: Colors.redAccent,
-                ),
+                trailing: Image.asset("assets/images/gifticon.png")
               ),
             ),
             Container(
@@ -540,14 +601,14 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
               margin: const EdgeInsets.only(left: 15, right: 15, top: 15),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
+                  color: ColorResource.accoutdetailsappbar,
                   boxShadow: const [
                     BoxShadow(
                       color: Color(0x3F000000),
                       blurRadius: 4,
                     ),
                   ]),
-              child: const ListTile(
+              child:  ListTile(
                 contentPadding: EdgeInsets.zero,
                 title: Text(
                   'Stock up on your inventory',
@@ -567,17 +628,10 @@ class _BottomHomeServiceScreenState extends State<BottomHomeServiceScreen> {
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
-                    Icon(
-                      Icons.keyboard_double_arrow_right,
-                      color: Colors.blue,
-                    ),
+                    Image.asset("assets/images/doublerighticon.png")
                   ],
                 ),
-                trailing: Icon(
-                  Icons.store_mall_directory_rounded,
-                  size: 40,
-                  color: Colors.redAccent,
-                ),
+                trailing: Image.asset("assets/images/pileicon.png")
               ),
             ),
             const SizedBox(
