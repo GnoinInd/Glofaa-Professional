@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glofaa/track_your_performance_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 
 class CreditsHistoryScreen extends StatefulWidget {
   const CreditsHistoryScreen({super.key});
@@ -15,28 +16,30 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
       length: 4,
       child: Scaffold(
         appBar: AppBar(
+          backgroundColor: ColorResource.accoutdetailsappbar,
           title: const Text(
             'Credits History',
             style: TextStyle(
               fontWeight: FontWeight.w600,
               fontFamily: 'Poppins',
-              fontSize: 20,
+              fontSize:20,
             ),
           ),
         ),
         body: Column(
           children: [
             Container(
+
               width: double.infinity,
               padding: const EdgeInsets.all(20),
-              margin: const EdgeInsets.only(left: 10, right: 10, top: 5),
+              margin: const EdgeInsets.only(left:32, right:32, top:22,bottom: 22),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: Colors.white,
                   boxShadow: const [
                     BoxShadow(
                       color: Color(0x3F000000),
-                      blurRadius: 4,
+                      blurRadius:10,
                     ),
                   ]),
               child: Column(
@@ -46,20 +49,20 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
                       fontFamily: 'Poppins',
-                      fontSize: 18,
+                      fontSize:12,
                     ),
                   ),
                   const SizedBox(height: 10),
                   const Text(
                     '25 Credits',
                     style: TextStyle(
-                      color: Colors.green,
-                      fontWeight: FontWeight.w600,
+                      color: ColorResource.snackbargreen,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 30,
+                      fontSize:32,
                     ),
                   ),
-                  const SizedBox(height: 10),
+                  const SizedBox(height:15),
                   SizedBox(
                     height: 30,
                     child: ElevatedButton(
@@ -71,8 +74,7 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     const TrackYourPerformanceScreen()));
                       },
                       style: ElevatedButton.styleFrom(
-                          backgroundColor:
-                              const Color.fromRGBO(147, 76, 234, 1),
+                          backgroundColor: ColorResource.selectLanguageButton,
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5)),
                           padding: EdgeInsets.zero),
@@ -80,9 +82,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                         'Buy',
                         style: TextStyle(
                           color: Colors.white,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                           fontFamily: 'Poppins',
-                          fontSize: 15,
+                          fontSize:16,
                         ),
                       ),
                     ),
@@ -93,18 +95,15 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
             Container(
               margin: const EdgeInsets.only(left: 10, right: 10, top: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  color: Colors.white,
-                  boxShadow: const [
-                    BoxShadow(
-                      color: Color(0x3F000000),
-                      blurRadius: 4,
-                    ),
-                  ]),
+                  borderRadius: BorderRadius.only(topRight:Radius.circular(10),topLeft: Radius.circular(10)),
+                  color:  ColorResource.accoutdetailsappbar,
+                 ),
               child: const TabBar(
                 isScrollable: true,
+                labelColor: ColorResource.selectLanguageButton,
+                indicatorColor: ColorResource.selectLanguageButton,
                 labelStyle: TextStyle(
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w700,
                   fontFamily: 'Poppins',
                   fontSize: 14,
                 ),
@@ -124,23 +123,16 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 5,
-            ),
             Expanded(
               child: Container(
                 padding: const EdgeInsets.all(20),
                 margin: const EdgeInsets.only(
-                    left: 10, right: 10, top: 5, bottom: 5),
+                    left: 10, right: 10,bottom: 5),
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
+                  border: Border.all(color: ColorResource.grey_3),
+
                     color: Colors.white,
-                    boxShadow: const [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                      ),
-                    ]),
+                   ),
                 child: const TabBarView(children: [
                   SingleChildScrollView(
                     child: Column(
@@ -154,10 +146,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   '20 jul, 06:56',
                                   style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -170,9 +162,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15,
+                                      fontSize:16,
                                     ),
                                   ),
                                 ),
@@ -182,10 +174,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'View Lead',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -197,9 +189,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   'Lead bought',
                                   style: TextStyle(
                                     color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -209,9 +201,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:16,
                                   ),
                                 ),
                                 SizedBox(
@@ -220,10 +212,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'Remaining Credits: 25',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -240,10 +232,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   '20 jul, 06:56',
                                   style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -256,9 +248,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15,
+                                      fontSize:16,
                                     ),
                                   ),
                                 ),
@@ -268,10 +260,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'View Lead',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -280,12 +272,12 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
                                 Text(
-                                  'Lead bought',
+                                  'Payout recharge',
                                   style: TextStyle(
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.snackbargreen,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -295,9 +287,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:16,
                                   ),
                                 ),
                                 SizedBox(
@@ -306,10 +298,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'Remaining Credits: 25',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -326,10 +318,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   '20 jul, 06:56',
                                   style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -342,9 +334,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15,
+                                      fontSize:16,
                                     ),
                                   ),
                                 ),
@@ -354,10 +346,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'View Lead',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -369,9 +361,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   'Lead bought',
                                   style: TextStyle(
                                     color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -381,9 +373,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:16,
                                   ),
                                 ),
                                 SizedBox(
@@ -392,10 +384,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'Remaining Credits: 25',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -412,10 +404,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   '20 jul, 06:56',
                                   style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -428,9 +420,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15,
+                                      fontSize:16,
                                     ),
                                   ),
                                 ),
@@ -440,10 +432,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'View Lead',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -455,9 +447,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   'Lead bought',
                                   style: TextStyle(
                                     color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -467,9 +459,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:16,
                                   ),
                                 ),
                                 SizedBox(
@@ -478,10 +470,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'Remaining Credits: 25',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -498,10 +490,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   '20 jul, 06:56',
                                   style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -514,9 +506,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                     style: TextStyle(
                                       overflow: TextOverflow.ellipsis,
                                       color: Colors.black,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w700,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15,
+                                      fontSize:16,
                                     ),
                                   ),
                                 ),
@@ -526,10 +518,10 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 Text(
                                   'View Lead',
                                   style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],
@@ -541,9 +533,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   'Lead bought',
                                   style: TextStyle(
                                     color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:12,
                                   ),
                                 ),
                                 SizedBox(
@@ -553,9 +545,9 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                   '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
+                                    fontSize:16,
                                   ),
                                 ),
                                 SizedBox(
@@ -563,97 +555,11 @@ class _CreditsHistoryScreenState extends State<CreditsHistoryScreen> {
                                 ),
                                 Text(
                                   'Remaining Credits: 25',
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 13,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        Divider(),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  '20 jul, 06:56',
-                                  style: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 15,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                SizedBox(
-                                  width: 150,
-                                  child: Text(
-                                    'Mr Alpha',
-                                    style: TextStyle(
-                                      overflow: TextOverflow.ellipsis,
-                                      color: Colors.black,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: 'Poppins',
-                                      fontSize: 15,
-                                    ),
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  'View Lead',
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 13,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Text(
-                                  'Lead bought',
-                                  style: TextStyle(
-                                    color: Colors.orange,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 15,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  '7 Credits',
                                   style: TextStyle(
                                     color: Colors.black,
-                                    fontWeight: FontWeight.w600,
+                                    fontWeight: FontWeight.w400,
                                     fontFamily: 'Poppins',
-                                    fontSize: 15,
-                                  ),
-                                ),
-                                SizedBox(
-                                  height: 5,
-                                ),
-                                Text(
-                                  'Remaining Credits: 25',
-                                  style: TextStyle(
-                                    color: Colors.blue,
-                                    fontWeight: FontWeight.w500,
-                                    fontFamily: 'Poppins',
-                                    fontSize: 13,
+                                    fontSize:12,
                                   ),
                                 ),
                               ],

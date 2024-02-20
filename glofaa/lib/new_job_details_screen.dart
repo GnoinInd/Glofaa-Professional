@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:glofaa/new_job_status_screen.dart';
 import 'package:glofaa/utils/resource/color_resource.dart';
+import 'package:glofaa/utils/resource/dimensions_resource.dart';
+import 'package:glofaa/utils/resource/style_resource.dart';
 
 class NewJobDetailsScreen extends StatefulWidget {
   const NewJobDetailsScreen({super.key});
@@ -164,14 +166,12 @@ class _NewJobDetailsScreenState extends State<NewJobDetailsScreen> {
                       width: 20,
                       height: 20,
                       decoration: const BoxDecoration(
-                        color: Colors.black54,
+                        color: ColorResource.classictitle,
                         shape: BoxShape.circle,
                       ),
-                      child: const Icon(
-                        FontAwesomeIcons.three,
-                        size: 12,
-                        color: Colors.white,
-                      ),
+                      child:  Center(
+                        child: Text("3",style:  StyleResource.instance.styleBold(DimensionResource.fontSizeSmallTo, ColorResource.black),),
+                      )
                     ),
                     const SizedBox(
                       width: 30,

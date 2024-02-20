@@ -1335,10 +1335,10 @@ class _BottomOngoingServiceScreenState
                                   const Text(
                                     'Tomorrow',
                                     style: TextStyle(
-                                        color: Colors.black54,
-                                        fontWeight: FontWeight.w600,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700,
                                         fontFamily: 'Poppins',
-                                        fontSize: 15),
+                                        fontSize:16),
                                   ),
                                 ],
                               ),
@@ -1352,10 +1352,10 @@ class _BottomOngoingServiceScreenState
                                       '4:01 pm',
                                       style: TextStyle(
                                           overflow: TextOverflow.ellipsis,
-                                          color: Colors.black54,
-                                          fontWeight: FontWeight.w600,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w400,
                                           fontFamily: 'Poppins',
-                                          fontSize: 15),
+                                          fontSize: 16),
                                     ),
                                     Row(
                                       children: [
@@ -1374,11 +1374,83 @@ class _BottomOngoingServiceScreenState
                                 child: Text(
                                   'Astra tower, south building,WBghkjhlhjkj',
                                   style: TextStyle(
-                                      color: Colors.black54,
+                                      color: Colors.black,
                                       overflow: TextOverflow.ellipsis,
-                                      fontWeight: FontWeight.w600,
+                                      fontWeight: FontWeight.w400,
                                       fontFamily: 'Poppins',
-                                      fontSize: 15),
+                                      fontSize:12),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        Container(
+                          margin: const EdgeInsets.symmetric(
+                              horizontal: 20, vertical: 10),
+                          padding: const EdgeInsets.all(10),
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(10),
+                              color: Colors.white,
+                              boxShadow: const [
+                                BoxShadow(
+                                  color: Color(0x3F000000),
+                                  blurRadius: 4,
+                                ),
+                              ]),
+                          child:  Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                children: [
+                                  Image.asset("assets/images/plus1day.png"),
+                                  const SizedBox(width: 5,),
+                                  const Text(
+                                    '6-10-2023',
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w700,
+                                        fontFamily: 'Poppins',
+                                        fontSize:16),
+                                  ),
+                                ],
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 30.0, top: 5),
+                                child: Row(
+                                  mainAxisAlignment:
+                                  MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '4:01 pm',
+                                      style: TextStyle(
+                                          overflow: TextOverflow.ellipsis,
+                                          color: Colors.black,
+                                          fontWeight: FontWeight.w400,
+                                          fontFamily: 'Poppins',
+                                          fontSize: 16),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Icon(Icons.perm_phone_msg_rounded),
+                                        SizedBox(
+                                          width: 10,
+                                        ),
+                                        Icon(Icons.directions_rounded),
+                                      ],
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              const Padding(
+                                padding: EdgeInsets.only(left: 30.0, top: 5),
+                                child: Text(
+                                  'Astra tower, south building,WBghkjhlhjkj',
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      overflow: TextOverflow.ellipsis,
+                                      fontWeight: FontWeight.w400,
+                                      fontFamily: 'Poppins',
+                                      fontSize:12),
                                 ),
                               ),
                             ],
