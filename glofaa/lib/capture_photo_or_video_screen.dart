@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:glofaa/add_proof_screen.dart';
 import 'package:glofaa/new_job_status_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 
@@ -79,6 +80,7 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
           : null,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           (_capturedImage != null)
               ? Expanded(
@@ -225,6 +227,7 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                             ),
                           ),
                           Container(
+                            height: 52,
                             margin: const EdgeInsets.only(
                                 left: 50, right: 50.0, top: 50),
                             width: double.infinity,
@@ -240,9 +243,9 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                */
                               },
                               style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.blue),
+                                  backgroundColor: ColorResource.selectLanguageButton),
                               label: const Text(
-                                "Click Photo",
+                                "Click Selfie",
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.w600,
@@ -259,6 +262,7 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                         ],
                       ))
                   : Container(
+            height: 52,
                       width: double.infinity,
                       margin: const EdgeInsets.all(30.0),
                       child: ElevatedButton.icon(
@@ -266,14 +270,14 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                           _pickImageFromCamera();
                         },
                         style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue),
+                            backgroundColor: ColorResource.selectLanguageButton),
                         icon: const Icon(
                           Icons.camera_alt_outlined,
                           color: Colors.white,
                           size: 18,
                         ),
                         label: const Text(
-                          "Click Photo",
+                          "Click Selfie",
                           style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.w600,
@@ -296,20 +300,21 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                                 : _captureVideoFromCamera();
                           },
                           style: OutlinedButton.styleFrom(
-                            foregroundColor: Colors.blue,
-                            side: const BorderSide(color: Colors.blue),
+                            foregroundColor: ColorResource.selectLanguageButton,
+                            side: const BorderSide(color: ColorResource.selectLanguageButton),
                           ),
                           icon: const Icon(
                             Icons.camera_alt_outlined,
-                            size: 16,
+                            size: 22,
+                            color: ColorResource.selectLanguageButton,
                           ),
                           label: const Text(
                             "Retake",
                             style: TextStyle(
-                                color: Colors.blue,
-                                fontWeight: FontWeight.w600,
+                                color: ColorResource.selectLanguageButton,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: 'Poppins',
-                                fontSize: 14),
+                                fontSize:16),
                           ),
                         ),
                       ),
@@ -322,7 +327,7 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                             _displayProgressBottomSheet();
                           },
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue),
+                              backgroundColor: ColorResource.selectLanguageButton),
                           icon: const Icon(
                             Icons.task_alt_outlined,
                             color: Colors.white,
@@ -332,9 +337,9 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                             "Approve",
                             style: TextStyle(
                                 color: Colors.white,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: 'Poppins',
-                                fontSize: 14),
+                                fontSize:16),
                           ),
                         ),
                       ),
@@ -416,7 +421,7 @@ class _CapturePhotoOrVideoScreenState extends State<CapturePhotoOrVideoScreen> {
                           ? 'Upload initiated successfully'
                           : (widget.clickingPicAfterCleaningAC == true)
                               ? 'Successfully captured the image'
-                              : "Photo check Successful",
+                              : "Successfully captured the image",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: (!isLoading)

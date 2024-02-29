@@ -1,6 +1,9 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
+import 'package:glofaa/utils/resource/dimensions_resource.dart';
+import 'package:glofaa/utils/resource/style_resource.dart';
 
 class GlofaaChatScreen extends StatefulWidget {
   const GlofaaChatScreen({super.key});
@@ -16,10 +19,11 @@ class _GlofaaChatScreenState extends State<GlofaaChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: ColorResource.accoutdetailsappbar,
           title: const Text(
         'Glofaa Chat',
         style: TextStyle(
-          fontWeight: FontWeight.w600,
+          fontWeight: FontWeight.w700,
           fontFamily: 'Poppins',
           fontSize: 20,
         ),
@@ -27,31 +31,31 @@ class _GlofaaChatScreenState extends State<GlofaaChatScreen> {
       body: Column(
         children: [
           Container(
-            color: Colors.yellow.shade50,
+            color: ColorResource.simrancolor,
             child: ListTile(
               leading: CircleAvatar(
-                child: Image.asset('assets/images/otp_image.png'),
+                child: Image.asset('assets/images/senitizemask.png'),
               ),
               title: const Text('Mr. Alpha',
                   style: TextStyle(
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 15)),
+                      fontSize:20)),
               subtitle: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('Lotus Boulevard, Sector 100, Noida, UP',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12)),
                   Text('10:00 am, 20th March',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
-                          fontSize: 11)),
+                          fontSize: 12)),
                 ],
               ),
               trailing: Container(
@@ -66,35 +70,88 @@ class _GlofaaChatScreenState extends State<GlofaaChatScreen> {
               ),
             ),
           ),
+         const SizedBox(height:15,),
           Expanded(
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Image.asset(
                   "assets/images/chat_img.png",
-                  height: 80,
-                  width: 80,
+                  height:100,
+                  width:100,
                 ),
                 const Text(
                   'Introducing chat',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     fontFamily: 'Poppins',
-                    fontSize: 14,
+                    fontSize:16,
                   ),
                 ),
                 const Padding(
-                  padding: EdgeInsets.all(10.0),
+                  padding: EdgeInsets.only(left:45,right:45,top: 20),
                   child: Text(
                     'Keep your account safe. Never share personal or account information in this chat including phone number, pin and pass codes ',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       fontFamily: 'Poppins',
                       fontSize: 12,
                     ),
                   ),
                 ),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 16,right: 16),
+            child: Row(
+              children: [
+              Container(
+                height: 36,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  border: Border.all(color: ColorResource.grey_3)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8,right: 8),
+                    child: Text("Please confirm booking",style: StyleResource.instance.styleRegular(DimensionResource.fontSizeSmallTo, ColorResource.selectLanguageButton),),
+                  ),
+                ),
+
+              ),
+              SizedBox(width: 16,),
+              Container(
+                height: 36,
+                width: 83,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  border: Border.all(color: ColorResource.grey_3)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8,right: 8),
+                    child: Text("Hello",style: StyleResource.instance.styleRegular(DimensionResource.fontSizeSmallTo, ColorResource.selectLanguageButton),),
+                  ),
+                ),
+
+              ),
+                SizedBox(width: 16,),
+              Container(
+                height: 36,
+                width: 49,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(70),
+                  border: Border.all(color: ColorResource.grey_3)
+                ),
+                child: Center(
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 8,right: 8),
+                    child: Text("Hii",style: StyleResource.instance.styleRegular(DimensionResource.fontSizeSmallTo, ColorResource.selectLanguageButton),),
+                  ),
+                ),
+
+              ),
               ],
             ),
           ),

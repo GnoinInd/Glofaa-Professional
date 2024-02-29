@@ -36,19 +36,19 @@ class _IssueScreenState extends State<IssueScreen> {
                       style: TextStyle(
                           overflow: TextOverflow.ellipsis,
                           color: Colors.black,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                           fontFamily: 'Poppins',
-                          fontSize: 15),
+                          fontSize:16),
                     ),
                     SizedBox(
                       height: 10,
                     ),
                     Text(
-                      "MR. Alpha tower 19, flat 205, Lotus Boulevard, Sector 100, Noida, Uttar pradesh 201303, india",
+                      "MR. Alpha tower 19, flat 205, Lotus\nBoulevard, Sector 100, Noida, Uttar pradesh\n201303, india",
                       style: TextStyle(
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
-                          fontSize: 13),
+                          fontSize: 12),
                     ),
                   ],
                 ),
@@ -61,9 +61,9 @@ class _IssueScreenState extends State<IssueScreen> {
                 style: TextStyle(
                     overflow: TextOverflow.ellipsis,
                     color: Colors.black,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     fontFamily: 'Poppins',
-                    fontSize: 15),
+                    fontSize:16),
               ),
             ),
             Container(
@@ -87,7 +87,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Customer is unreachable',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -100,7 +100,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius: 5,
                             ),
                           ]),
                       child: const Icon(
@@ -117,7 +117,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Customer asked to reschedule',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -130,7 +130,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius: 5,
                             ),
                           ]),
                       child: const Icon(
@@ -147,7 +147,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Customer asked to cancel',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -160,7 +160,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius: 5,
                             ),
                           ]),
                       child: const Icon(
@@ -177,7 +177,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Can’t deliver job - personal reasons',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -190,7 +190,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -207,7 +207,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Can’t deliver job - material or skill issue',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -220,7 +220,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -240,9 +240,9 @@ class _IssueScreenState extends State<IssueScreen> {
                 style: TextStyle(
                     overflow: TextOverflow.ellipsis,
                     color: Colors.black,
-                    fontWeight: FontWeight.w600,
+                    fontWeight: FontWeight.w700,
                     fontFamily: 'Poppins',
-                    fontSize: 15),
+                    fontSize:16),
               ),
             ),
             Container(
@@ -266,7 +266,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Get start job OTP',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -279,7 +279,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius: 5,
                             ),
                           ]),
                       child: const Icon(
@@ -296,7 +296,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Issues with job package or price',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -309,7 +309,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -326,7 +326,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Can’t find customer’s address',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -339,7 +339,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -356,7 +356,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Customers requires preferred professional',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -369,7 +369,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -386,7 +386,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Received a job from male customer',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -399,7 +399,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -416,7 +416,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'Report an accident',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -429,7 +429,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius:5,
                             ),
                           ]),
                       child: const Icon(
@@ -446,7 +446,7 @@ class _IssueScreenState extends State<IssueScreen> {
                       'App is not working properly',
                       style: TextStyle(
                           color: Colors.black,
-                          fontWeight: FontWeight.w500,
+                          fontWeight: FontWeight.w400,
                           fontFamily: 'Poppins',
                           fontSize: 12),
                     ),
@@ -459,7 +459,7 @@ class _IssueScreenState extends State<IssueScreen> {
                           boxShadow: [
                             BoxShadow(
                               color: Color(0x3F000000),
-                              blurRadius: 2,
+                              blurRadius: 5,
                             ),
                           ]),
                       child: const Icon(

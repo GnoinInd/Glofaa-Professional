@@ -23,6 +23,7 @@ class ColorResource {
   static const Color startext = Color(0xffE7820C);
   static const Color classictitle = Color(0xffD9D9D9);
   static const Color darkredprofessional = Color(0xffC13C3C);
+  static const Color simrancolor = Color(0xffFFF4E8);
 
   static const Color textButtonColor = Color(0xffEE682A);
   static const Color mainColor = Color(0xff882B97);

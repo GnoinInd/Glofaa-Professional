@@ -6,6 +6,7 @@ import 'package:glofaa/capture_photo_or_video_screen.dart';
 import 'package:glofaa/caution_screen.dart';
 import 'package:glofaa/issue_screen.dart';
 import 'package:glofaa/map_screen.dart';
+import 'package:glofaa/utils/resource/color_resource.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 import 'glofaa_chat_screen.dart';
@@ -49,14 +50,16 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
     final messenger = ScaffoldMessenger.of(context);
 
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red.shade50,
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               width: double.infinity,
               alignment: Alignment.center,
-              color: Colors.red.shade50,
-              margin: const EdgeInsets.only(top: 35.0),
+              margin: const EdgeInsets.only(top: 10),
               child: Column(
                 mainAxisSize: MainAxisSize.max,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,9 +74,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                       style: TextStyle(
                           overflow: TextOverflow.ellipsis,
                           color: Colors.black,
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                           fontFamily: 'Poppins',
-                          fontSize: 15),
+                          fontSize:20),
                     ),
                   ),
                   const SizedBox(
@@ -84,9 +87,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     child: const Text(
                       "Mrs. Gama",
                       style: TextStyle(
-                          fontWeight: FontWeight.w600,
+                          fontWeight: FontWeight.w700,
                           fontFamily: 'Poppins',
-                          fontSize: 14),
+                          fontSize:16),
                     ),
                   ),
                   const SizedBox(
@@ -109,7 +112,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             children: [
                               Icon(
                                 Icons.perm_phone_msg_rounded,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.selectLanguageButton,
                               ),
                               SizedBox(
                                 height: 5,
@@ -117,10 +120,10 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               Text(
                                 "CONTACT",
                                 style: TextStyle(
-                                    color: Color.fromRGBO(147, 76, 234, 1),
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13),
+                                    fontSize: 12),
                               ),
                             ],
                           ),
@@ -139,7 +142,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             children: [
                               Icon(
                                 Icons.directions,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.selectLanguageButton,
                               ),
                               SizedBox(
                                 height: 5,
@@ -147,10 +150,10 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               Text(
                                 "SEE ON MAP",
                                 style: TextStyle(
-                                    color: Color.fromRGBO(147, 76, 234, 1),
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13),
+                                    fontSize: 12),
                               ),
                             ],
                           ),
@@ -169,7 +172,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             children: [
                               Icon(
                                 Icons.help_outlined,
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.selectLanguageButton,
                               ),
                               SizedBox(
                                 height: 5,
@@ -177,10 +180,10 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               Text(
                                 "HELP",
                                 style: TextStyle(
-                                    color: Color.fromRGBO(147, 76, 234, 1),
-                                    fontWeight: FontWeight.w600,
+                                    color: ColorResource.selectLanguageButton,
+                                    fontWeight: FontWeight.w700,
                                     fontFamily: 'Poppins',
-                                    fontSize: 13),
+                                    fontSize:12),
                               ),
                             ],
                           ),
@@ -203,12 +206,12 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                   "Make sure you wear your sanitized safety equipments.",
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w600,
+                      fontWeight: FontWeight.w700,
                       fontFamily: 'Poppins',
-                      fontSize: 12.5),
+                      fontSize:16),
                 ),
                 trailing: CircleAvatar(
-                  child: Image.asset("assets/images/otp_image.png"),
+                  child: Image.asset("assets/images/senitizemask.png"),
                 ),
               ),
             ),
@@ -219,9 +222,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                 "LOCATION",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     fontFamily: 'Poppins',
-                    fontSize: 13),
+                    fontSize:12),
               ),
             ),
             Container(
@@ -242,13 +245,11 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                   "tower 19, flat 205, Lotus Boulevard, sector 100, Noida, Uttar Pradesh, 201303, India",
                   style: TextStyle(
                       color: Colors.black,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w400,
                       fontFamily: 'Poppins',
-                      fontSize: 13),
+                      fontSize:12),
                 ),
-                trailing: CircleAvatar(
-                  child: Image.asset("assets/images/otp_image.png"),
-                ),
+                trailing: Image.asset("assets/images/mappic.png"),
               ),
             ),
             Container(
@@ -258,9 +259,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                 "JOB SUMMARY",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w500,
+                    fontWeight: FontWeight.w400,
                     fontFamily: 'Poppins',
-                    fontSize: 13),
+                    fontSize:12),
               ),
             ),
             Container(
@@ -285,7 +286,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         "2 x Deep clean AC service (split)",
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Poppins',
                             fontSize: 12),
                       ),
@@ -299,9 +300,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             "998",
                             style: TextStyle(
                                 color: Colors.black,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: 'Poppins',
-                                fontSize: 13),
+                                fontSize: 12),
                           ),
                         ],
                       ),
@@ -314,7 +315,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     "split AC Regular Service x 1",
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w500,
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
                         fontSize: 12),
                   ),
@@ -329,7 +330,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     "Others",
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
                         fontSize: 12),
                   ),
@@ -343,7 +344,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         "Convenience Fee",
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w500,
+                            fontWeight: FontWeight.w400,
                             fontFamily: 'Poppins',
                             fontSize: 12),
                       ),
@@ -356,9 +357,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "49",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w700,
                               fontFamily: 'Poppins',
-                              fontSize: 13),
+                              fontSize: 12),
                         ),
                       ]),
                     ],
@@ -377,9 +378,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         "Total",
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Poppins',
-                            fontSize: 12),
+                            fontSize: 14),
                       ),
                       Row(children: [
                         Icon(
@@ -390,9 +391,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "1047",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w600,
+                              fontWeight: FontWeight.w700,
                               fontFamily: 'Poppins',
-                              fontSize: 13),
+                              fontSize:14),
                         ),
                       ]),
                     ],
@@ -403,8 +404,8 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                   Text(
                     "check final amount on invoice screen",
                     style: TextStyle(
-                        color: Color.fromRGBO(206, 177, 20, 1),
-                        fontWeight: FontWeight.w500,
+                        color: Color(0xffF5802C),
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
                         fontSize: 12),
                   ),
@@ -414,14 +415,20 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
             const SizedBox(
               height: 10,
             ),
-            const Divider(),
-            const Text(
-              "Reached customer place?",
-              style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
-                  fontFamily: 'Poppins',
-                  fontSize: 12),
+            Container(
+              height: 26,
+              width: double.infinity,
+              color: ColorResource.grey_2,
+              child: const Center(
+                child: Text(
+                  "Job Started",
+                  style: TextStyle(
+                      color: ColorResource.glofagreenresendcolor,
+                      fontWeight: FontWeight.w700,
+                      fontFamily: 'Poppins',
+                      fontSize: 12),
+                ),
+              ),
             ),
             const SizedBox(
               height: 10,
@@ -432,7 +439,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                       _checkPermission(Permission.camera);
                     },
                     style:
-                        ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                        ElevatedButton.styleFrom(backgroundColor: ColorResource.selectLanguageButton),
                     child: const Text(
                       "Take Selfie & Notify Arrival to Customer",
                       style: TextStyle(
@@ -448,7 +455,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         SizedBox(
-                          width: 145,
+                          height: 45,
                           child: OutlinedButton(
                             onPressed: () {
                               _displayAddACDetailsBottomSheet();
@@ -461,26 +468,26 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               "Update Status",
                               style: TextStyle(
                                   color: Colors.blue,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w700,
                                   fontFamily: 'Poppins',
-                                  fontSize: 11.9),
+                                  fontSize:16),
                             ),
                           ),
                         ),
                         SizedBox(
-                          width: 145,
+                          height: 45,
                           child: ElevatedButton(
                             onPressed: () {},
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blue,
+                              backgroundColor: ColorResource.selectLanguageButton,
                             ),
                             child: const Text(
                               "Create Estimate",
                               style: TextStyle(
                                   color: Colors.white,
-                                  fontWeight: FontWeight.w600,
+                                  fontWeight: FontWeight.w700,
                                   fontFamily: 'Poppins',
-                                  fontSize: 11.9),
+                                  fontSize:16),
                             ),
                           ),
                         ),
@@ -567,14 +574,15 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
               height: 300,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const Text(
                     "Click your selfie correctly",
                     style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 0.67),
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
-                        fontSize: 20),
+                        fontSize:16),
                   ),
                   const SizedBox(
                     height: 20,
@@ -583,7 +591,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     "1. Pull your mask to the chin and than take a selfie",
                     style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 0.67),
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
                         fontSize: 12),
                   ),
@@ -594,22 +602,15 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     "2. Look straight and position your face inside the circle",
                     style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 0.67),
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w700,
                         fontFamily: 'Poppins',
                         fontSize: 12),
                   ),
                   const SizedBox(
                     height: 20,
                   ),
-                  const Icon(
-                    Icons.circle,
-                    color: Color.fromRGBO(147, 76, 234, 1),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {
+                  InkWell(
+                    onTap: (){
                       Navigator.pop(context);
                       //   _displayBottomSheet2();
 
@@ -619,22 +620,34 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               builder: (context) =>
                                   CapturePhotoOrVideoScreen()));
                     },
-                    icon: const Icon(
-                      Icons.camera,
-                      color: Colors.white,
+                    child: Container(
+                      height: 52,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        color: ColorResource.selectLanguageButton,
+                        borderRadius: BorderRadius.circular(77)
+                      ),
+                      child: const Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.camera,
+                            color: Colors.white,
+                          ),
+                          SizedBox(width: 5,),
+                          Text(
+                            "Click Selfie",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: 'Poppins',
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
                     ),
-                    label: const Text(
-                      "Click Selfie",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 12),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(147, 76, 234, 1),
-                    ),
-                  )
+                  ),
                 ],
               ),
             ));
@@ -656,8 +669,8 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     child: IconButton(
                         icon: const Icon(
                           Icons.keyboard_arrow_down_rounded,
-                          color: Color.fromRGBO(147, 76, 234, 1),
-                          size: 30,
+                          color: ColorResource.selectLanguageButton,
+                          size: 32,
                         ),
                         onPressed: () {
                           Navigator.pop(context);
@@ -666,11 +679,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  const Icon(
-                    FontAwesomeIcons.personCirclePlus,
-                    color: Color.fromRGBO(147, 76, 234, 1),
-                    size: 45,
-                  ),
+                  Image.asset("assets/images/personcircle.png"),
                   const SizedBox(
                     height: 20,
                   ),
@@ -679,7 +688,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                         color: Colors.black,
-                        fontWeight: FontWeight.w600,
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
                         fontSize: 20),
                   ),
@@ -690,8 +699,8 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     "We will confirm it with the customer too.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                        color: Color.fromRGBO(0, 0, 0, 0.67),
-                        fontWeight: FontWeight.w600,
+                        color: Color.fromRGBO(0, 0, 0, 0.62),
+                        fontWeight: FontWeight.w400,
                         fontFamily: 'Poppins',
                         fontSize: 16),
                   ),
@@ -702,6 +711,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       SizedBox(
+                        height: 44,
                         width: 150,
                         child: OutlinedButton(
                           onPressed: () {
@@ -709,22 +719,23 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           },
                           style: OutlinedButton.styleFrom(
                             foregroundColor:
-                                const Color.fromRGBO(147, 76, 234, 1),
+                                 ColorResource.selectLanguageButton,
                             side: const BorderSide(
-                              color: Color.fromRGBO(147, 76, 234, 1),
+                              color: ColorResource.selectLanguageButton
                             ),
                           ),
                           child: const Text(
                             "No",
                             style: TextStyle(
-                                color: Color.fromRGBO(147, 76, 234, 1),
-                                fontWeight: FontWeight.w600,
+                                color: ColorResource.selectLanguageButton,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: 'Poppins',
-                                fontSize: 14),
+                                fontSize:20),
                           ),
                         ),
                       ),
                       SizedBox(
+                        height: 44,
                         width: 150,
                         child: ElevatedButton(
                           onPressed: () {
@@ -733,15 +744,15 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                const Color.fromRGBO(147, 76, 234, 1),
+                                 ColorResource.selectLanguageButton,
                           ),
                           child: const Text(
                             "Yes",
                             style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w600,
+                                color: ColorResource.white,
+                                fontWeight: FontWeight.w700,
                                 fontFamily: 'Poppins',
-                                fontSize: 14),
+                                fontSize:20),
                           ),
                         ),
                       ),
@@ -757,13 +768,19 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
         barrierDismissible: false,
         context: context,
         builder: (context) => Dialog(
+          backgroundColor: ColorResource.white,
               child: Container(
+                decoration: BoxDecoration(
+                    color: ColorResource.white,
+                  borderRadius: BorderRadius.circular(10)
+                ),
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Container(
-                      height: 35,
+                      height: 42,
                       alignment: Alignment.topRight,
                       child: OutlinedButton.icon(
                         onPressed: () {
@@ -775,19 +792,20 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         },
                         style: OutlinedButton.styleFrom(
                           foregroundColor:
-                              const Color.fromRGBO(147, 76, 234, 1),
+                          ColorResource.selectLanguageButton,
                           side: const BorderSide(
-                            color: Color.fromRGBO(147, 76, 234, 1),
+                            color: ColorResource.selectLanguageButton,
                           ),
                         ),
                         icon: const Icon(
                           Icons.help_outline,
                           size: 20,
+                          color: ColorResource.selectLanguageButton,
                         ),
                         label: const Text(
                           "Help",
                           style: TextStyle(
-                              color: Color.fromRGBO(147, 76, 234, 1),
+                              color: ColorResource.selectLanguageButton,
                               fontWeight: FontWeight.w600,
                               fontFamily: 'Poppins',
                               fontSize: 14),
@@ -797,27 +815,45 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Text(
-                      "Enter job code",
-                      style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 18),
+                    Row(
+                      children: [
+                        const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Enter job code",
+                              style: TextStyle(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 18),
+                            ),
+                            Text(
+                              "Ask customer for this\ncode",
+                              style: TextStyle(
+                                  color: Color.fromRGBO(0, 0, 0, 0.50),
+                                  fontWeight: FontWeight.w600,
+                                  fontFamily: 'Poppins',
+                                  fontSize: 14),
+                            ),
+                          ],
+                        ),
+                        const Spacer(),
+                        Stack(
+                          children: [
+                            Image.asset("assets/images/PinCode.png"),
+                            Positioned(
+                                top: 25,
+                                right:0,
+                                child: Image.asset("assets/images/Lock.png")),
+
+                          ],
+                        )
+                      ],
                     ),
+
                     const SizedBox(
-                      height: 20,
-                    ),
-                    const Text(
-                      "Ask customer for this code",
-                      style: TextStyle(
-                          color: Color.fromRGBO(0, 0, 0, 0.50),
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 14),
-                    ),
-                    const SizedBox(
-                      height: 20,
+                      height:25,
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -827,7 +863,19 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color(0xffd9d9d9)),
+                            color: ColorResource.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 1.0, // soften the shadow
+                                spreadRadius: 1.0, //extend the shadow
+                                offset: Offset(
+                                  1.0, // Move to right 5  horizontally
+                                  2.0, // Move to bottom 5 Vertically
+                                ),
+                              )
+                            ],
+                          ),
                           child: TextField(
                             inputFormatters: [
                               FilteringTextInputFormatter.digitsOnly,
@@ -842,7 +890,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             keyboardType: TextInputType.phone,
                             controller: otp1,
                             style: const TextStyle(
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.black,
                                 fontWeight: FontWeight.w200,
                                 fontFamily: 'Poppins',
                                 fontSize: 17),
@@ -872,7 +920,18 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color(0xffd9d9d9)),
+                            color: ColorResource.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 1.0, // soften the shadow
+                                spreadRadius: 1.0, //extend the shadow
+                                offset: Offset(
+                                  1.0, // Move to right 5  horizontally
+                                  2.0, // Move to bottom 5 Vertically
+                                ),
+                              )
+                            ],),
                           child: TextField(
                             inputFormatters: [
                               FilteringTextInputFormatter.digitsOnly,
@@ -888,7 +947,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             keyboardType: TextInputType.phone,
                             controller: otp2,
                             style: const TextStyle(
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.black,
                                 fontWeight: FontWeight.w200,
                                 fontFamily: 'Poppins',
                                 fontSize: 17),
@@ -918,7 +977,18 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color(0xffd9d9d9)),
+                            color: ColorResource.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 1.0, // soften the shadow
+                                spreadRadius: 1.0, //extend the shadow
+                                offset: Offset(
+                                  1.0, // Move to right 5  horizontally
+                                  2.0, // Move to bottom 5 Vertically
+                                ),
+                              )
+                            ],),
                           child: TextField(
                             inputFormatters: [
                               FilteringTextInputFormatter.digitsOnly,
@@ -934,7 +1004,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             keyboardType: TextInputType.phone,
                             controller: otp3,
                             style: const TextStyle(
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.black,
                                 fontWeight: FontWeight.w200,
                                 fontFamily: 'Poppins',
                                 fontSize: 17),
@@ -960,11 +1030,23 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           width: 25,
                         ),
                         Container(
+
                           width: 40,
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(10),
-                              color: const Color(0xffd9d9d9)),
+                            color: ColorResource.white,
+                            boxShadow: const [
+                              BoxShadow(
+                                color: Colors.grey,
+                                blurRadius: 1.0, // soften the shadow
+                                spreadRadius: 1.0, //extend the shadow
+                                offset: Offset(
+                                  1.0, // Move to right 5  horizontally
+                                  2.0, // Move to bottom 5 Vertically
+                                ),
+                              )
+                            ],),
                           child: TextField(
                             inputFormatters: [
                               FilteringTextInputFormatter.digitsOnly,
@@ -980,7 +1062,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                             keyboardType: TextInputType.phone,
                             controller: otp4,
                             style: const TextStyle(
-                                color: Color.fromRGBO(147, 76, 234, 1),
+                                color: ColorResource.black,
                                 fontWeight: FontWeight.w200,
                                 fontFamily: 'Poppins',
                                 fontSize: 17),
@@ -1007,14 +1089,14 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     const SizedBox(
                       height: 20,
                     ),
-                    const Row(
+                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Icon(Icons.access_time),
-                        SizedBox(
-                          width: 10,
+                        Image.asset("assets/images/Restart.png",color: ColorResource.selectLanguageButton,),
+                        const SizedBox(
+                          width:5,
                         ),
-                        Text(
+                        const Text(
                           'Resend OTP in 00:28',
                           style: TextStyle(
                               fontWeight: FontWeight.w500,
@@ -1038,7 +1120,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         },
                         style: ElevatedButton.styleFrom(
                           backgroundColor:
-                              const Color.fromRGBO(147, 76, 234, 1),
+                              ColorResource.selectLanguageButton,
                         ),
                         child: const Text(
                           "Verify OTP",
@@ -1073,9 +1155,9 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         "I hereby  agree and accept the following for the current job:",
                         style: TextStyle(
                             color: Colors.black,
-                            fontWeight: FontWeight.w600,
+                            fontWeight: FontWeight.w700,
                             fontFamily: 'Poppins',
-                            fontSize: 16),
+                            fontSize:20),
                       ),
                       const SizedBox(
                         height: 10,
@@ -1087,7 +1169,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           padding: EdgeInsets.only(top: 4.0),
                           child: Icon(
                             Icons.circle_rounded,
-                            size: 11,
+                            size: 8,
                             color: Colors.black,
                           ),
                         ),
@@ -1095,7 +1177,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "I will not perform gas charging under any circumstances on a job if i am not approved for Gas charging by glofaa technology.",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Poppins',
                               fontSize: 13),
                         ),
@@ -1107,7 +1189,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           padding: EdgeInsets.only(top: 4.0),
                           child: Icon(
                             Icons.circle_rounded,
-                            size: 11,
+                            size: 8,
                             color: Colors.black,
                           ),
                         ),
@@ -1115,7 +1197,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "I will check if AC has  Nitrogen or not before I start working on it.",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Poppins',
                               fontSize: 13),
                         ),
@@ -1127,7 +1209,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           padding: EdgeInsets.only(top: 4.0),
                           child: Icon(
                             Icons.circle_rounded,
-                            size: 11,
+                            size: 8,
                             color: Colors.black,
                           ),
                         ),
@@ -1135,7 +1217,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "I will ensure  that the AC plug is switched off before I start working on it.",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Poppins',
                               fontSize: 13),
                         ),
@@ -1147,7 +1229,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           padding: EdgeInsets.only(top: 4.0),
                           child: Icon(
                             Icons.circle_rounded,
-                            size: 11,
+                            size:8,
                             color: Colors.black,
                           ),
                         ),
@@ -1155,7 +1237,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           "If i am not approved for gas charging by glofaa technology and if a customer requires gas charging of his/her air conditioner unit(s), I undertake to inform the customer that i am not approved to carry out gas charging. I further undertake  to inform the customer that they can make a specific request for gas charging on the Glofaa Technology app so that an approved technician may be connected with the customer. ",
                           style: TextStyle(
                               color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.w400,
                               fontFamily: 'Poppins',
                               fontSize: 13),
                         ),
@@ -1175,7 +1257,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor:
-                                const Color.fromRGBO(147, 76, 234, 1),
+                                ColorResource.selectLanguageButton,
                           ),
                           child: const Text(
                             "I agree",
@@ -1202,14 +1284,15 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
               width: double.infinity,
               height: 350,
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.start,
+
                 children: [
                   const SizedBox(
                     height: 10,
                   ),
                   const Text(
-                    "Please click a Picture with safety harness in your hand",
-                    textAlign: TextAlign.center,
+                    "Please click a selfie with safety harness in your hand",
+                    textAlign: TextAlign.start,
                     style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w600,
@@ -1220,7 +1303,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     height: 20,
                   ),
                   const Text(
-                    "1. Pull your mask to the chin and than take a selfie",
+                    "1. pull safety harness out of bag and hold it in your hand.",
                     style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 0.67),
                         fontWeight: FontWeight.w600,
@@ -1231,7 +1314,7 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                     height: 20,
                   ),
                   const Text(
-                    "2. Look straight and position your face inside the circle",
+                    "2. Click a selfie with safety harness clearly visible",
                     style: TextStyle(
                         color: Color.fromRGBO(0, 0, 0, 0.67),
                         fontWeight: FontWeight.w600,
@@ -1239,17 +1322,10 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                         fontSize: 14),
                   ),
                   const SizedBox(
-                    height: 20,
+                    height:40,
                   ),
-                  const Icon(
-                    Icons.circle,
-                    color: Color.fromRGBO(147, 76, 234, 1),
-                  ),
-                  const SizedBox(
-                    height: 20,
-                  ),
-                  ElevatedButton.icon(
-                    onPressed: () {
+                  InkWell(
+                    onTap: () {
                       // Navigator.pop(context);
                       Navigator.push(
                           context,
@@ -1257,22 +1333,61 @@ class _DeliverySummaryScreenState extends State<DeliverySummaryScreen> {
                               builder: (context) => CapturePhotoOrVideoScreen(
                                   captureImage2ndTime: true)));
                     },
-                    icon: const Icon(
-                      Icons.camera,
-                      color: Colors.white,
+                    child: Container(
+                      height: 52,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                          color: ColorResource.selectLanguageButton,
+                          borderRadius: BorderRadius.circular(77)
+                      ),
+                      child: const Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.camera,
+                            color: Colors.white,
+                          ),
+                          SizedBox(width: 5,),
+                          Text(
+                            "Click Selfie",
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: 'Poppins',
+                                fontSize: 12),
+                          ),
+                        ],
+                      ),
                     ),
-                    label: const Text(
-                      "Click Picture",
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w600,
-                          fontFamily: 'Poppins',
-                          fontSize: 12),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color.fromRGBO(147, 76, 234, 1),
-                    ),
-                  )
+                  ),
+                  // Center(
+                  //   child: ElevatedButton.icon(
+                  //     onPressed: () {
+                  //       // Navigator.pop(context);
+                  //       Navigator.push(
+                  //           context,
+                  //           MaterialPageRoute(
+                  //               builder: (context) => CapturePhotoOrVideoScreen(
+                  //                   captureImage2ndTime: true)));
+                  //     },
+                  //     icon: const Icon(
+                  //       Icons.camera,
+                  //       color: Colors.white,
+                  //     ),
+                  //     label: const Text(
+                  //       "Click Picture",
+                  //       style: TextStyle(
+                  //           color: Colors.white,
+                  //           fontWeight: FontWeight.w600,
+                  //           fontFamily: 'Poppins',
+                  //           fontSize: 12),
+                  //     ),
+                  //     style: ElevatedButton.styleFrom(
+                  //       backgroundColor: const Color.fromRGBO(147, 76, 234, 1),
+                  //     ),
+                  //   ),
+                  // )
                 ],
               ),
             ));
